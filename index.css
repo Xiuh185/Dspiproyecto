@@ -5,23 +5,27 @@
     font-style: bold;
     }
 @font-face{
-        font-family: 'Koh Santepheapl';
-        src: url(/Resources/KohSantepheap-Light.ttf);
-        font-weight: lighter;
-        font-style: lighter;
+    font-family: 'Koh Santepheapl';
+    src: url(/Resources/KohSantepheap-Light.ttf);
+    font-weight: 300;
+    font-style: lighter;
 }
 @font-face{
-            font-family: 'Koh Santepheap';
-            src: url(/Resources/KohSantepheap-Regular.ttf);
-            font-weight: 400;
-            font-style: normal;
+    font-family: 'Koh Santepheap';
+    src: url(/Resources/KohSantepheap-Regular.ttf);
+    font-weight: 400;
+    font-style: normal;
 }
 body{
     background-color: #FEFDFD;
-    font-family: 'Koh SantepheapB';
+    font-family: 'Koh Santepheap';
+    text-transform: capitalize;
     margin: auto;
+    width: auto;
+    height: auto;
 }
 .h1a{
+    padding: 2.5rem;
     text-align: center;
     font-style: bold;
     font-size:xx-large;
@@ -30,64 +34,124 @@ body{
 .cajatexto{
     font-family: 'Koh Santepheap';
     background: #edf0f8;
-    box-sizing: 60%;
+    box-sizing: auto;
     size: 40rem;
     padding: 0.5rem;
     border: 0.2rem;
     border-radius: 0.5rem;
     border-color: black;
     border-style: solid;
+    margin: auto;
 }
 .cajapassword{
     font-family: 'Koh Santepheap';
     background: #edf0f8;
-    box-sizing: 60%;
+    box-sizing: auto;
     size: 40rem;
     padding: 0.5rem;
     border: 0.2rem;
     border-radius: 0.5rem;
     border-color: black;
     border-style: solid;
+    margin: auto;
+}
+.boton-div{
+    padding: 4.5rem;
 }
 .boton{
-    font-family: 'Koh Santepheap';
+    font-family: 'Koh SantepheapB';
+    font-size: x-large;
     background-color: #2952BC;
     color: white;
     border-radius: 0.5rem;
-    width: 16rem;
+    width: auto;
+    height: auto;
     padding: 1.5rem;
-    margin: 2rem;
+    margin: auto;
     box-shadow: 0px 1px 25px rgba(0, 0, 0, 0.3);
+    
 }
 div{
     text-align: center;
     margin: auto;
-    padding: 0.5rem;
 }
 .cuerpoprincipal{
     background: #d8e0f3;
-    width: 20rem;
-    height: 15rem;
+    width: 30%;
+    height: 12.5rem;
+    align-content: center;
     margin: auto;
     border: 0.2rem;
     border-radius: 0.5rem;
     border-color: black;
     border-style: solid;
     box-shadow: 0px 1px 25px rgba(3, 3, 3, 0.623);
+    padding: 2.0rem auto;
 }
 .barradetareas{
     background:  #0A2A7C;
     font-family: 'Koh Santepheapl';
+    text-align: left;
     color: white;
     padding: 2rem;
     width: 100%;
     height: 15%;
 }
-.barrainferior{
-    background:  #0A2A7C;
-    font-family: 'Koh Santepheapl';
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+.container{
+    max-width: 100%;
+    margin: 0 auto;
+}
+.footer{
+    background-color: #292d38;
+    padding: 1.5rem 0;
+}
+.footer-row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.footer-links{
+    width: 25%;
+    padding: 0 15px;
+}
+.footer-links h4{
+    font-size: medium;
+    color: #FFFFFF;
+    margin-bottom: 25px;
+    font-weight: 500;
+    border-bottom: 2px solid #d8e0f3;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+.footer-links ul li a{
+    font-size: small;
+    text-decoration: none;
+    color: #BBBBBB;
+    display: block;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+}
+.footer-links ul li a:hover{
     color: white;
-    padding: 2rem;
-    width: 100%;
-    height: 15%;
+    padding-left: 6px;
+}
+.social-link a{
+    display: inline-block;
+    min-height: 40px;
+    width: 40px;
+    background-color: #0A2A7C;
+    margin: 0 10px 0 10px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: white;
+    transition: all, 0.5s, ease-in;
+}
+.social-link a:hover{
+    background-color: #2952BC;
 }
