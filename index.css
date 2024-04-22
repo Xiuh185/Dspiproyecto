@@ -56,7 +56,7 @@ body{
     margin: auto;
 }
 .boton-div{
-    padding: 4.5rem;
+    padding: 1.5rem;
 }
 .boton{
     font-family: 'Koh SantepheapB';
@@ -64,9 +64,9 @@ body{
     background-color: #2952BC;
     color: white;
     border-radius: 0.5rem;
-    width: auto;
+    width: 25%;
     height: auto;
-    padding: 1.5rem;
+    padding: 1rem;
     margin: auto;
     box-shadow: 0px 1px 25px rgba(0, 0, 0, 0.3);
     
@@ -77,7 +77,7 @@ div{
 }
 .cuerpoprincipal{
     background: #d8e0f3;
-    width: 30%;
+    width: 20rem;
     height: 12.5rem;
     align-content: center;
     margin: auto;
@@ -154,4 +154,8 @@ div{
 }
 .social-link a:hover{
     background-color: #2952BC;
+}
+.divesp{
+    padding: 1.25rem;
+    margin: auto;
 }
