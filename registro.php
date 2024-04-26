@@ -4,24 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link href = index.css rel="stylesheet"/>
+    <link href = Registro.css rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <div class="barradetareas">Technologies LH</div>
+    
 </head>
 <body>
-    <p><h1 class="h1a">Registro de usuario</h1></p></n>
-    <div class="cuerpoprincipal">
-    <h4>Nombre de usuario:</h4></n>
-    <input type="text" name="username" class = "cajatexto"></n>
-    <h4>Password:</h4></n>
-    <input type="password" name="userpassword" class="cajapassword">
-    <h4>Confirmar Password:</h4></n>
-    <input type="password" name="userpassword" class="cajapassword">   
-</div>
+    <div class="barradetareas"> Technologies LH</div>
+           
 
-    <div class="boton-div"> <input type="submit" name="Registro" class="boton"> </div>
-    
-        
+    <form = method="post">
+        <h2>Registro de usuario</h2>
+        <div class="input-wrapper">
+            <input type="text" name="user" placeholder="Nombre de usuario">
+            <img class="input-icon" src="Resources/name.svg" alt="">
+        </div>
+        <div class="input-wrapper">
+            <input type="text" name="key" placeholder="Contraseña">
+            <img class="input-icon" src="Resources/password.svg" alt="">
+        </div>
+        <input class="btn" type="submit" name="enviar" value="Enviar">
+        <h5><p>¿Ya tiene cuenta? <a href="index.php">Regresar ahora</a></p></h5>
+        <?php
+        include("registrar.php");
+        ?>
+    </form>
+
     <footer class="footer">
         <div class="container">
             <div class="footer-row">
@@ -45,5 +52,6 @@
                 </div>
             </div>
     </footer>
+
 </body>
 </html>
