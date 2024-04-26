@@ -9,17 +9,25 @@
     <div class="barradetareas">Technologies LH</div>
 </head>
 <body>
-    <p><h1 class="h1a">Inicia Sesión</h1></p></n>
-    <div class="cuerpoprincipal">
-    <h4>Nombre de usuario:</h4></n>
-    <input type="text" name="username" class = "cajatexto"></n>
-    <h4>Password:</h4></n>
-    <input type="password" name="userpassword" class="cajapassword">   
-</div>
-<div class="divesp"><a href="sing.html">Registrarse ahora</a></div> 
-    <div class="boton-div"> <input type="submit" name="Iniciar sesión" class="boton"> </div>
-    
-        
+    <div class="barradetareas"> Technologies LH</div>
+           
+
+    <form = method="post">
+        <h2>Iniciar Sesión</h2>
+        <div class="input-wrapper">
+            <input type="text" name="user" placeholder="Nombre de usuario">
+            <img class="input-icon" src="Resources/name.svg" alt="">
+        </div>
+        <div class="input-wrapper">
+            <input type="text" name="key" placeholder="Contraseña">
+            <img class="input-icon" src="Resources/password.svg" alt="">
+        </div>
+        <input class="btn" type="submit" name="enviar" value="Enviar">
+        <h5><p>¿No tiene cuenta? <a href="registro.php">Registrarse ahora</a></p></h5>
+        <?php
+        include("consultar.php");
+        ?>
+    </form>
     <footer class="footer">
         <div class="container">
             <div class="footer-row">
@@ -44,3 +52,4 @@
             </div>
     </footer>
 </body>
+</html>
