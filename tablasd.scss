@@ -100,3 +100,98 @@ body{
         padding: 0 30px 20px;
     }
 }
+.barradetareas{
+    background:  #0A2A7C;
+    font-family: 'Koh Santepheapl';
+    font-size: medium;
+    text-align: left;
+    color: white;
+    padding: 2em;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+}
+
+*{
+    box-sizing: border-box;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.container2{
+    max-width: 100%;
+    margin: 0 auto;
+}
+.footerbase{
+    width: 100%;
+    background-color: #292d38;
+    height: auto;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+    position: absolute;
+    padding: 20px;
+    bottom: 0;
+}
+.footer-row2{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    text-align: center;
+}
+.footer-links{
+    width: 50%;
+    padding: 0;
+}
+.footer-links h4{
+    color: #FFFFFF;
+    margin-bottom: 15px;
+    font-weight: 500;
+    border-bottom: 2px solid #d8e0f3;
+    padding-bottom: 15px;
+    display: inline-block;
+}
+.footer-links ul li a{
+    font-size: small;
+    text-decoration: none;
+    align-items: center;
+    text-align: center;
+    color: #BBBBBB;
+    display: block;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+}
+.footer-links ul li a:hover{
+    color: white;
+    padding-left: 6px;
+}
+.social-link a{
+    display: inline-block;
+    min-height: 40px;
+    width: 40px;
+    background-color: #0A2A7C;
+    margin: 0 10px 0 10px;
+    text-align: center;
+    align-items: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: white;
+    transition: all, 0.5s, ease-in;
+}
+.social-link a:hover{
+    background-color: #2952BC;
+}
+
+.barradetareas{
+    background:  #0A2A7C;
+    font-family: 'Koh Santepheapl';
+    font-size: medium;
+    text-align: left;
+    color: white;
+    padding: 2em;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+}
