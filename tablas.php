@@ -15,6 +15,7 @@
     <link href = tablasd.scss rel="stylesheet"/>
 </head>
 <body>
+<div class="barradetareas"> Technologies LH</div>
     <div class="container">
         <div class="table_header">
             <p>Historial de Informes</p>
