@@ -10,23 +10,18 @@
 </head>
 <body>
     <div class="barradetareas"> Technologies LH</div>
-           
-
-    <form = method="post">
+    <form action="consultar.php" method="post">
         <h2>Iniciar Sesión</h2>
         <div class="input-wrapper">
-            <input type="text" name="user" placeholder="Nombre de usuario">
+            <input type="text" name="username" placeholder="Nombre de usuario">
             <img class="input-icon" src="Resources/name.svg" alt="">
         </div>
         <div class="input-wrapper">
-            <input type="text" name="key" placeholder="Contraseña">
+            <input type="text" name="key_username" placeholder="Contraseña">
             <img class="input-icon" src="Resources/password.svg" alt="">
         </div>
         <input class="btn" type="submit" name="enviar" value="Enviar">
         <h5><p>¿No tiene cuenta? <a href="registro.php">Registrarse ahora</a></p></h5>
-        <?php
-        include("consultar.php");
-        ?>
     </form>
     <footer class="footer">
         <div class="container">
@@ -45,7 +40,6 @@
                             <a href="#"><i class="fab fa-facebook-f"></i></a>
                             <a href="#"><i class="fab fa-instagram"></i></a>
                             <a href="#"><i class="fab fa-x"></i></a>
-                            <a href="#"><i class="fab fa-linkedin"></i></a>
                         </div>
                     </div>
                 </div>
