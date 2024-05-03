@@ -62,5 +62,27 @@
                 <p> Total de filas: 0</p>
             </div>
     </div>
+        <footer class="footerbase">
+        <div class="container2">
+            <div class="footer-row2">
+                <div class="footer-links">  
+                    <h4>Sobre Nosotros</h4>  
+                    <ul>
+                        <li><a href="#">Acerca de nosotros</a></li>
+                        <li><a href="#">Política de privacidad</a></li>
+                        <li><a href="#">Nuestros servicios</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links"> 
+                        <h4>Siguenos</h4>
+                        <div class="social-link">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-x"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </footer>
 </body>
 </html>
