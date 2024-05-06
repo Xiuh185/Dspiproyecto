@@ -1,2 +1,0 @@
-# Dspiproyecto
-p escolar
