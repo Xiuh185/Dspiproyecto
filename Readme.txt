@@ -28,7 +28,7 @@ Como es usuario y password de su PHPmyadmin, además de crear las bases de datos
 Programas requeridos:
 
 1. PHPmyadmin por aparte de crear las bases de datos correspondientes para que funcionen, además del Mysql Workbench 
-y el community, ya que necesita vas a necesitar saberte ese login.
+y el community, ya que lo vas a necesitar saberte ese login.
 
 2. El servidor de Apache que tenga la carpeta htdocs (habilitar los extensiones de php y mysqli), configurarlo correctamente, 
 checar el puerto del localhost para usar el por defecto y desabilitar cualquier servicios de programas que usen ese puerto 
