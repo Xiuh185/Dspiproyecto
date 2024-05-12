@@ -1,4 +1,8 @@
 Ultima actualización del website
+12/05/ 2024
+-------------------------------------------------------------
+Ahora ya funciona el modulo de editar y elimar registros y ademas se actualizo con una vista previa
+el nuevo registro de informe
 
 05/05/2024
 
