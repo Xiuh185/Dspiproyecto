@@ -7,7 +7,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 150vh;
+    min-height: auto !important;
     font-family: "Koh Santephaeap";
     background-color: #eeeeee;
     font-size: small;
@@ -16,8 +16,10 @@ body{
 
 .container{
   position: relative fixed;
-   margin-top: 8rem;
-   margin-bottom: 15rem;
+  display: flex;
+  flex-direction: column;
+   margin-top: 7.5em;
+   margin-bottom: 15em;
    margin-left: auto;
    margin-right: auto;
    align-content: center;
@@ -27,8 +29,6 @@ body{
     height: auto;
     background-color: #FFFFFF;
     border-radius: 30px;
-    display: flex;
-    flex-direction: column;
 
 .table_header{
     display: flex;
@@ -171,7 +171,7 @@ body{
     font-size: medium;
     text-align: left;
     color: white;
-    padding: 1em;
+    padding: 0.75em;
     width: 100%;
     height: auto;
     position: absolute fixed;
@@ -222,4 +222,39 @@ p{
     padding: 0.5em;
     transition: all;
     align-items: center;
+}
+.cerrar_sesion{
+    text-align: center;
+    width: auto !important;;
+    height: auto;
+    padding: 0.5em;
+    font-size: medium;
+    height: auto;
+        background: linear-gradient(
+    90deg, 
+    rgb(32, 100, 77) 25%,
+    rgb(10, 75, 48) 100%);
+    border: 1px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+    display: flex;
+    float: right;
+    transform: translate(-30% , 40%);
+}
+
+.a_1{
+    outline: none;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+.titulo{
+    text-align: center;
+    width: auto !important;;
+    height: auto;
+    padding: 0.5em;
+    font-size: medium;
+    height: auto;
+    display: flex;
+    float: left;
+    transform: translate(20% , 0%);
 }
