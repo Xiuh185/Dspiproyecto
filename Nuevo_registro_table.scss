@@ -8,7 +8,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 245vh;
+    min-height: auto !important;
     font-family: "Koh Santephaeap";
     background-color: #eeeeee;
     font-size: small;
@@ -16,8 +16,12 @@ body{
     align-content: center;
 }
 .containerform{
-    position:  relative;
+    position:  relative fixed;
     display: flex;
+    margin-top: 3em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0.5em;
     border-radius: 25px;
     border: 1px solid #292d38;
     background-color: #eeeeee;
@@ -25,10 +29,6 @@ body{
     flex-direction: column; 
     width: 35%;
     height: auto;
-    margin-top: 8.5em;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 0.5em;
     padding: 10px;
 }
 .input-wrapper{
@@ -205,13 +205,47 @@ input, select{
     font-size: medium;
     text-align: left;
     color: white;
-    padding: 1em;
+    padding: 0.75em;
     width: 100%;
     height: auto;
-    position: absolute;
+    position: absolute fixed;
     top: 0;
 }
+.cerrar_sesion{
+    text-align: center;
+    width: auto !important;;
+    height: auto;
+    padding: 0.5em;
+    font-size: medium;
+    height: auto;
+        background: linear-gradient(
+    90deg, 
+    rgb(32, 100, 77) 25%,
+    rgb(10, 75, 48) 100%);
+    border: 1px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+    display: flex;
+    float: right;
+    transform: translate(-30% , 40%);
+}
 
+.a_1{
+    outline: none;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+.titulo{
+    text-align: center;
+    width: auto !important;;
+    height: auto;
+    padding: 0.5em;
+    font-size: medium;
+    height: auto;
+    display: flex;
+    float: left;
+    transform: translate(20% , 0%);
+}
 .btn{
     font-family: 'Koh SantepheapB';
     color: white;
