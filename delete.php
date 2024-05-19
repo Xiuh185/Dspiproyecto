@@ -31,7 +31,13 @@
     <link href = delete.scss rel="stylesheet"/>
 </head>
 <body>
-<div class="barradetareas"><a class="title" href="tablas.php"><h2>Technologies LH</h2></a></div>
+<div class="barradetareas"><div class="titulo">
+    <a class="title" href="tablas.php"><h2>Technologies LH</h2></a>
+    </div>
+    <div class="cerrar_sesion">
+    <a class="a_1" href="logout.php">Cerrar la sesión</a>
+    </div>   
+</div>
 <div class="container">
     <h2 class="H2S"> Eliminar Registros </h2>
     <p>Por favor, seleccione uno o varios registros para poder eliminarlos:</p>
