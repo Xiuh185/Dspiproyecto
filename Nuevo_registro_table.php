@@ -22,7 +22,13 @@ if (!isset($_SESSION["username"])) {
     <style>
     @import url('https://fonts.googleapis.com/css2?family=Koh+Santepheap&display=swap');
     </style>
-    <div class="barradetareas"><a class="title" href="tablas.php"><h2>Technologies LH</h2></a></div>
+    <div class="barradetareas"><div class="titulo">
+    <a class="title" href="tablas.php"><h2>Technologies LH</h2></a>
+    </div>
+    <div class="cerrar_sesion">
+    <a class="a_1" href="logout.php">Cerrar la sesión</a>
+</div>
+</div>   
 </head>
 <body>
     <div class="containerform">
