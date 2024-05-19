@@ -8,7 +8,6 @@
         header("Location: index.php");
         exit;
     }
-    
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -23,24 +22,36 @@
     @import url('https://fonts.googleapis.com/css2?family=Koh+Santepheap&display=swap');
     </style>
     <link href = tablasd.scss rel="stylesheet"/>
-    <div class="barradetareas"><a class="title" href="tablas.php"><h2>Technologies LH</h2></a></div>
+    <div class="barradetareas">
+    <div class="titulo">
+    <a class="title" href="tablas.php"><h2>Technologies LH</h2></a>
+    </div>
+    <div class="cerrar_sesion">
+    <a class="a_1" href="logout.php">Cerrar la sesión</a>
+</div>    
+</form>
+</div>
 </head>
 <body>
     <div class="container">
         <div class="table_header">
             <H2>Historial de Informes</H2>
-                <select name="" id="">
-                    <option value="" selected>DOCX</option>
-                    <option value="">PDF</option>
-                    <option value="">XSLX</option>
-                </select>
                 Acciones:<a href="Nuevo_registro_table.php"><i class="bi bi-file-earmark-plus"></i></a>
                 <a href="delete.php"><i class="bi bi-trash3-fill"></i></a>
+                <form method="post" action="<?=$_SERVER['PHP_SELF']?>">
                 <div class="input_search">
-                <input type="search" placeholder="Buscar">
-                <i class="bi bi-search" id="search"></i>
+                <input type="text" name="nombresearch" placeholder="Buscar por nombre">
+                <SELECT name="docsearch">
+                    <option value="" selected>Todos los archivos</option>
+                    <option value="DOCX">DOCX</option>
+                    <option value="PDF">PDF</option>
+                    <option value="XSLX">XSLX</option>
+                </SELECT>
+                <input type="submit" name="Search"  class= "search" value="Búscar">
+</form>
     </div>
             </div>
+
 
             <table class="table">
                 <thead class="table-dark">
@@ -55,10 +66,57 @@
                 </thead>
                 <tbody>
                     <?php 
-                    
-                        $sql = "SELECT * FROM informes";
-                        $resultados = mysqli_query($conex, $sql);
-                        while($r = mysqli_fetch_assoc($resultados)){
+                    // Consulta SQL para mostrar todos los registros
+                    // Procesar la búsqueda si se envía el formulario
+                    if (isset($_POST['Search'])){
+                    $nombre = $_POST['nombresearch'];
+                    $doc = $_POST['docsearch'];
+
+                    //Checar si se llenaron los registros para la busqueda
+                    if(empty($_POST['nombresearch']) && empty($_POST['docsearch'] )){
+                        echo "<script>
+                        alert('Favor de llenar alguno de los campos, en caso contrario se volvera a mostrar todos los datos');
+                        location.assign('tablas.php');
+                        </script>";
+                   } else{
+                    // Consulta SQL para buscar registros que coincidan con el término de búsqueda
+                    if(empty($_POST['nombresearch'])){
+                        $sql = "SELECT * FROM informes WHERE Tipo LIKE '%$doc%'";
+                    }
+                    if(empty($_POST['docsearch'])){
+                        $sql = "SELECT * FROM informes WHERE Nom_Informe LIKE '%$nombre%'";
+                    }
+                    if(!empty($_POST['nombresearch']) &&!empty($_POST['docsearch'])){
+                        $sql = "SELECT * FROM informes WHERE Nom_Informe LIKE '%$nombre%' AND Tipo LIKE '%$doc%'";
+                    }
+                   }
+                $resultados = mysqli_query($conex, $sql);
+                while($r = mysqli_fetch_assoc($resultados)){
+                    echo "<tr>";
+                    echo "<td>" . $r['ID_Informe'] . "</td>";
+                    echo "<td>" . $r['Nom_Informe'] . "</td>";
+                    echo "<td>" . $r['Fecha'] ."</td>";
+                    echo "<td>" . $r['Tipo'] ."</td>";
+                    echo "<td><a href='" . $r["Link_Download"] . "'><i class='bi bi-download'></i></a></td>";
+                    echo "<td> 
+                    <form action='edit.php' method='POST'>
+                    <input type='hidden' name='id' value='" . $r["ID_Informe"] . "'>
+                    <input type='hidden' name='nombre' value='" . $r["Nom_Informe"] . "'>
+                    <input type='hidden' name='fecha' value='" . $r["Fecha"] . "'>
+                    <input type='hidden' name='tipodearchivo' value='" . $r["Tipo"] . "'>
+                    <input type='hidden' name='descarga' value='" . $r["Link_Download"] . "'>
+                    <input type='submit' class='btneditar' name='editar' value='Editar' '>
+                    </form>
+                    </td>";
+                    echo "</tr>";
+                        ?>
+                       <?php
+                    //llave del while y if 
+                    } } 
+                    else { 
+                    $sql = "SELECT * FROM informes";
+                    $resultados = mysqli_query($conex, $sql);
+                    while($r = mysqli_fetch_assoc($resultados)){
                     
                 echo "<tr>";
                     echo "<td>" . $r['ID_Informe'] . "</td>";
@@ -78,7 +136,7 @@
                     </td>";
                     echo "</tr>";
                 }
-
+            }
                 ?>
                 </tbody>
             </table>
