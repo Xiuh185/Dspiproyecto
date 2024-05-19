@@ -7,7 +7,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 150vh;
+    min-height: auto !important;;
     font-family: "Koh Santephaeap";
     background-color: #eeeeee;
     font-size: small;
@@ -53,26 +53,36 @@ body{
     border: none;
     border-bottom: 1PX solid #FFFFFF;
     width: 100px;
-    padding: 10px 0;
-    font-size: 16px;
+    padding: 10px 5px;
+    border-radius: 30px;
+    font-size: small;
+    box-sizing: border-box;
+    border: 1px solid rgb(39, 53, 53);
     }
     .input_search{
     position: relative;
     input{
-        border-radius:  30px;
-        width: 125px;
+        border-radius: 30px;
+        width: 250px;
         padding: 10px 5px;
         outline: none;
         border: 1px solid rgb(39, 53, 53);
         box-sizing: border-box;
         padding-right: 50px;
     }
-    #search{
-        position: absolute;
+    
+    .search{
+        position: relative;
+        width: 75px;
+        border-radius: 25px;
         top: 50%;
         right: 0;
-        margin-right: 1rem;
-        transform: translate(-55% , -55%);
+        margin: auto;
+        transform: translate(15% , 0%);
+        background: #2952BC;
+        color: #FFFFFF;
+        box-sizing: border-box;
+    
             }
         }
     }
@@ -212,7 +222,7 @@ body{
     font-size: medium;
     text-align: left;
     color: white;
-    padding: 1em;
+    padding: 0.75em;
     width: 100%;
     height: auto;
     position: absolute fixed;
@@ -251,4 +261,39 @@ body{
     text-align: center;
     align-content: center;
     font-size: small;
+}
+.cerrar_sesion{
+    text-align: center;
+    width: auto !important;;
+    height: auto;
+    padding: 0.5em;
+    font-size: medium;
+    height: auto;
+        background: linear-gradient(
+    90deg, 
+    rgb(32, 100, 77) 25%,
+    rgb(10, 75, 48) 100%);
+    border: 1px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+    display: flex;
+    float: right;
+    transform: translate(-30% , 40%);
+}
+
+.a_1{
+    outline: none;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+.titulo{
+    text-align: center;
+    width: auto !important;;
+    height: auto;
+    padding: 0.5em;
+    font-size: medium;
+    height: auto;
+    display: flex;
+    float: left;
+    transform: translate(20% , 0%);
 }
