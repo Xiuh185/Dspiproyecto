@@ -1,4 +1,8 @@
 Ultima actualización del website
+19/05/2024
+-------------------------------------------------------------
+Ahora ya funciona la búsqueda de registros en la principal, se ajusto partes de la página en la altura
+Ya se puede cerrar sesión
 12/05/ 2024
 -------------------------------------------------------------
 Ahora ya funciona el modulo de editar y eliminar registros y ademas se actualizo con una vista previa
