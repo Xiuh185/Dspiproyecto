@@ -25,7 +25,9 @@ body{
    align-content: center;
    border-spacing: 0;
     box-shadow: 8px 8px 5px 0px rgb(78, 77, 77);
-    width: 70%;
+    max-width: auto !important;
+    min-width: auto !important;
+    min-height: auto;
     height: auto;
     background-color: #FFFFFF;
     border-radius: 30px;
@@ -34,15 +36,29 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 15px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 30px;
     padding: 20px 30px 0;
     }
     table{
+        table-layout: fixed;
         border-spacing: 0;
         margin-top: auto;
+        margin-left: 7px;
+        margin-right: 7px;
         margin-bottom: auto;
+        table-layout: fixed;
         thead{
+            width: auto;
             font-size: medium;
             text-align: center;
+            margin-top: 15px;
+            margin-bottom: 15PX;
+            margin-right: 15px;
+            margin-left: 15px;
+            padding: 1em;
             background-color: #0a2b72;
             color: #FFFFFF;
             th{
@@ -57,7 +73,7 @@ body{
                 td{
                     font-size: medium;
                     padding: 10px;
-                    text-align: center;
+                    text-align: left;
                     border-bottom: 1px solid #23346b;
                     #icons{
                         font-size: 25px;
@@ -206,6 +222,7 @@ body{
     margin-right: auto;
     text-align: center;
     font-family: 'Koh Santepheapl';
+    font-size: 3em;
 }
 p{
     font-family: 'Koh Santepheap';
@@ -257,4 +274,68 @@ p{
     display: flex;
     float: left;
     transform: translate(20% , 0%);
+}
+.H3S{
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 5em;
+    margin-right: 5em;
+    text-align: center;
+    font-family: 'Koh Santepheapl';
+    font-size: 1.5em;
+}
+.container-form{
+    width: 70%;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0.5em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;   
+}
+.control-label{
+    margin: auto;
+    display: inline-block;
+    width: 40%;
+    font-size: 1.5em;
+}
+.form-control{
+    align-content: right;
+    color: black;
+    padding: 10px 10px 10px 10px;
+    width: 55%;
+    border-radius: 15px;
+    border: 0;
+    font-size: small;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+    outline: none;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.search{
+    font-family: 'Koh Santepheapl';
+    width: 15%;
+    height: auto;
+    margin: auto;
+    padding: 1em;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(
+    90deg, 
+    rgb(32, 100, 77) 25%,
+    rgb(10, 75, 48) 100%);
+    border: 1px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+    outline: none;
+    font-size: medium;
+    cursor: pointer;
+    color: #FFFFFF;
 }
