@@ -41,13 +41,14 @@
                 <form method="post" action="<?=$_SERVER['PHP_SELF']?>">
                 <div class="input_search">
                 <input type="text" name="nombresearch" placeholder="Buscar por nombre">
+                <input type="date" name="datesearch">
                 <SELECT name="docsearch">
                     <option value="" selected>Todos los archivos</option>
                     <option value="DOCX">DOCX</option>
                     <option value="PDF">PDF</option>
                     <option value="XSLX">XSLX</option>
                 </SELECT>
-                <input type="submit" name="Search"  class= "search" value="Búscar">
+                <input type="submit" name="Search"  class= "search" value="Buscar">
 </form>
     </div>
             </div>
@@ -61,7 +62,7 @@
                     <td>Fecha de emisión <i class="bi bi-arrow-down-up"></i></td>
                     <td>Tipo de documento <i class="bi bi-arrow-down-up"></i></td>
                     <td>Link de Descarga <i class="bi bi-arrow-down-up"></i></td>
-                    <td>Editar registro<i class="bi bi-arrow-down-up"></i></td>
+                    <td>Editar registro <i class="bi bi-arrow-down-up"></i></td>
                 </tr>
                 </thead>
                 <tbody>
@@ -69,25 +70,39 @@
                     // Consulta SQL para mostrar todos los registros
                     // Procesar la búsqueda si se envía el formulario
                     if (isset($_POST['Search'])){
-                    $nombre = $_POST['nombresearch'];
-                    $doc = $_POST['docsearch'];
+                        $nombresearch = $_POST['nombresearch'];
+                        $datesearch = $_POST['datesearch'];
+                        $docsearch = $_POST['docsearch'];
+            
 
                     //Checar si se llenaron los registros para la busqueda
-                    if(empty($_POST['nombresearch']) && empty($_POST['docsearch'] )){
+                    if(empty($_POST['nombresearch']) && empty($_POST['docsearch']) && empty($_POST['datesearch'])){
                         echo "<script>
                         alert('Favor de llenar alguno de los campos, en caso contrario se volvera a mostrar todos los datos');
                         location.assign('tablas.php');
                         </script>";
                    } else{
                     // Consulta SQL para buscar registros que coincidan con el término de búsqueda
-                    if(empty($_POST['nombresearch'])){
-                        $sql = "SELECT * FROM informes WHERE Tipo LIKE '%$doc%'";
+                    if(!empty($_POST['nombresearch'])){
+                        $sql = "SELECT * FROM informes WHERE Nom_Informe LIKE '%$nombresearch%'";
                     }
-                    if(empty($_POST['docsearch'])){
-                        $sql = "SELECT * FROM informes WHERE Nom_Informe LIKE '%$nombre%'";
+                    if(!empty($_POST['datesearch'])){
+                        $sql = "SELECT * FROM informes WHERE Fecha LIKE '%$datesearch%'";
                     }
-                    if(!empty($_POST['nombresearch']) &&!empty($_POST['docsearch'])){
-                        $sql = "SELECT * FROM informes WHERE Nom_Informe LIKE '%$nombre%' AND Tipo LIKE '%$doc%'";
+                    if(!empty($_POST['docsearch'])){
+                        $sql = "SELECT * FROM informes WHERE Tipo LIKE '%$docsearch%'";
+                    }
+                    if(!empty($_POST['nombresearch']) && !empty($_POST['docsearch'])){
+                        $sql = "SELECT * FROM informes WHERE Nom_Informe LIKE '%$nombresearch%' AND Tipo LIKE '%$docsearch%'";
+                    }
+                    if(!empty($_POST['datesearch']) &&!empty($_POST['docsearch'])){
+                        $sql = "SELECT * FROM informes WHERE Fecha LIKE '%$datesearch%' AND Tipo LIKE '%$docsearch%'";
+                    }
+                    if(!empty($_POST['nombresearch']) &&!empty($_POST['datesearch'])){
+                        $sql = "SELECT * FROM informes WHERE Nom_Informe LIKE '%$nombresearch%' AND Fecha LIKE '%$datesearch%'";
+                    }
+                    if(!empty($_POST['nombresearch']) &&!empty($_POST['datesearch']) &&!empty($_POST['docsearch'])){
+                        $sql = "SELECT * FROM informes WHERE Nom_Informe LIKE '%$nombresearch%' AND Fecha LIKE '%$datesearch%' AND Tipo LIKE '%$docsearch%'";
                     }
                    }
                 $resultados = mysqli_query($conex, $sql);
