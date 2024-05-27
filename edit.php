@@ -44,7 +44,7 @@ $link = $_POST['descarga'];
     <h2 class="H2S">Editar registro de operaciones</h2>
     <p> Por favor introduce los datos correspondientes para editar el registro:</p><br>
         <div class="input-wrapper">
-            <label>Id Informe (No alterar):</label> <input type="label" name="id" value="<?php echo $id ?>">
+            <label>Id Informe (Solo Lectura):</label> <input type="label" name="id" value="<?php echo $id ?>" readonly>
         </div>    
         <div class="input-wrapper">
             <label>Nombre del registro:</label> <input type="text" name="nombre" value="<?php echo $nombre ?>">
