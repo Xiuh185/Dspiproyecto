@@ -1,12 +1,4 @@
 Ultima actualización del website
-19/05/2024
--------------------------------------------------------------
-Ahora ya funciona la búsqueda de registros en la principal, se ajusto partes de la página en la altura
-Ya se puede cerrar sesión
-12/05/ 2024
--------------------------------------------------------------
-Ahora ya funciona el modulo de editar y eliminar registros y ademas se actualizo con una vista previa
-el nuevo registro de informe
 
 05/05/2024
 
@@ -36,7 +28,7 @@ Como es usuario y password de su PHPmyadmin, además de crear las bases de datos
 Programas requeridos:
 
 1. PHPmyadmin por aparte de crear las bases de datos correspondientes para que funcionen, además del Mysql Workbench 
-y el community, ya que lo vas a necesitar saberte ese login.
+y el community, ya que necesita vas a necesitar saberte ese login.
 
 2. El servidor de Apache que tenga la carpeta htdocs (habilitar los extensiones de php y mysqli), configurarlo correctamente, 
 checar el puerto del localhost para usar el por defecto y desabilitar cualquier servicios de programas que usen ese puerto 
