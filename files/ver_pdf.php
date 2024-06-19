@@ -36,7 +36,7 @@
         echo '<div class="actions-link">';
         echo '<p>Acciones:</p>';
         echo '<p><a href="' . $archivo_pdf . '" target="_blank">Abrir PDF en una nueva pestaña</a></p>';
-        echo '<p><a href="../tablas.php">Regrasar a la pagina principal</a></p>';
+        echo '<p><a href="../tablas.php">Regresar a la pagina principal</a></p>';
         echo '<p><a href="../Nuevo_registro_table.php">Generar la cotización</a></p>';
         echo '</div>';
     } else {
