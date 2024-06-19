@@ -91,13 +91,12 @@ $pdf->Cell(40, 10, $total_final, 1);
  } else {
         echo "Error: ". $consulta. "<br>". $conex->error;
  }
+
  // Redirigir a la vista previa del PDF
  header("Location: ver_pdf.php?file=" . urlencode($nombre_archivo));
-
  exit;
 } else {
  echo "Por favor, ingrese un nombre de archivo válido.";
 }
 } 
-
 ?>
