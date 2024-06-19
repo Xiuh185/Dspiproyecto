@@ -35,12 +35,11 @@
 <body>
     <div class="container">
         <div class="wrapper">
-                <H2 class="h2header">Historial de Informes</H2>
-                <h3 class="H3S"> Acciones disponibles: </h3>
+        <H2 class="h2header">Historial de Informes</H2>
                 <div class="actions-link">
-                <a href="Nuevo_registro_table.php"><i class="bi bi-file-earmark-plus"></i></a>
-                <a href="files/Nuevoreporte.php"><i class="bi bi-calendar3-fill"></i></a>
-                <a href="delete.php"><i class="bi bi-trash3-fill"></i></a>
+                <a href="Nuevo_registro_table.php"><i class="bi bi-file-earmark-plus">Nuevo informe</i></a>
+                <a href="files/Nuevoreporte.php"><i class="bi bi-calendar3-fill">Nueva cotización</i></a>
+                <a href="delete.php"><i class="bi bi-trash3-fill">Borrar</i></a>
                 </div>
             </div>
                 <div class="table_header">
@@ -51,9 +50,7 @@
                 <input type="date" name="datesearch">
                 <SELECT name="docsearch">
                     <option value="" selected>Todos los archivos</option>
-                    <option value="DOCX">DOCX</option>
                     <option value="PDF">PDF</option>
-                    <option value="XSLX">XSLX</option>
                 </SELECT>
                 <input type="submit" name="Search"  class= "search" value="Buscar">
 </form>
